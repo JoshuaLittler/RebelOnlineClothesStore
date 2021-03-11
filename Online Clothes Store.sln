@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothesBackOffice", "ClothesBackOffice\ClothesBackOffice.csproj", "{AF657F29-7C09-47E6-9C98-F74FDEF95E49}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ClothesFrontOffice", "ClothesFrontOffice\", "{228A1D4E-A801-4948-9689-D150B2B83F2A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_31953"
+		Debug.AspNetCompiler.PhysicalPath = "ClothesFrontOffice\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_31953\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_31953"
+		Release.AspNetCompiler.PhysicalPath = "ClothesFrontOffice\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_31953\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "31953"
+		SlnRelativePath = "ClothesFrontOffice\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothesClasses", "ClothesClasses\ClothesClasses.csproj", "{7057CB93-6801-4E85-8F20-057AAEC0A8AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clothes Testing", "Clothes Testing\Clothes Testing.csproj", "{A0E74F55-7DFD-4549-A93E-F48C205A5358}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF657F29-7C09-47E6-9C98-F74FDEF95E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF657F29-7C09-47E6-9C98-F74FDEF95E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF657F29-7C09-47E6-9C98-F74FDEF95E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF657F29-7C09-47E6-9C98-F74FDEF95E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228A1D4E-A801-4948-9689-D150B2B83F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228A1D4E-A801-4948-9689-D150B2B83F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228A1D4E-A801-4948-9689-D150B2B83F2A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{228A1D4E-A801-4948-9689-D150B2B83F2A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7057CB93-6801-4E85-8F20-057AAEC0A8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7057CB93-6801-4E85-8F20-057AAEC0A8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7057CB93-6801-4E85-8F20-057AAEC0A8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7057CB93-6801-4E85-8F20-057AAEC0A8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E74F55-7DFD-4549-A93E-F48C205A5358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E74F55-7DFD-4549-A93E-F48C205A5358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E74F55-7DFD-4549-A93E-F48C205A5358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E74F55-7DFD-4549-A93E-F48C205A5358}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41D3C49D-E8F2-47BC-BCCF-ACF13F5AE21B}
+	EndGlobalSection
+EndGlobal
