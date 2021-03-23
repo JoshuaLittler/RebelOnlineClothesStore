@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AnOrder.aspx.cs" Inherits="AnOrder" %>
 
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,115 +7,60 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 350px;
-            text-align: right;
+            width: 100%;
+            background-color: #CCCCFF;
         }
         .auto-style2 {
-            height: 257px;
-        }
-        .auto-style3 {
-            width: 100%;
-            height: 217px;
-        }
-        .auto-style4 {
-            width: 350px;
+            width: 504px;
             text-align: right;
-            height: 44px;
-        }
-        .auto-style5 {
-            height: 44px;
-        }
-        .auto-style7 {
-            background-color: #CCFFFF;
-        }
-        .auto-style9 {
-            width: 350px;
-        }
-        .auto-style10 {
-            height: 44px;
-            width: 350px;
-        }
-        .auto-style12 {
-            font-weight: bold;
-            background-color: #66CCFF;
         }
     </style>
 </head>
-<body style="height: 266px">
+<body>
     <form id="form1" runat="server">
-        <div class="auto-style2">
-            <table class="auto-style3">
-                <tr>
-                    <td class="auto-style1">
-                        <strong>
-            <asp:Label ID="LabelOrderID" runat="server" Text="Order_ID" CssClass="auto-style7"></asp:Label>
-                        </strong>
-                    </td>
-                    <td class="auto-style9">
-            <asp:TextBox ID="txtOrderID" runat="server" Height="34px" style="margin-bottom: 0px" Width="274px"></asp:TextBox>
-            
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-            
-                        <strong>
-            
-            <asp:Label ID="LabelOrderDate" runat="server" Text="Order_Date" CssClass="auto-style7"></asp:Label>
-                        </strong>
-                    </td>
-                    <td class="auto-style9">
-            <asp:TextBox ID="TxtOrderDate" runat="server" Height="34px" style="margin-bottom: 0px" Width="270px"></asp:TextBox>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-            
-                        <strong>
-            
-            <asp:Label ID="LabelOrderCusNO" runat="server" Text="Order_Cus_No" CssClass="auto-style7"></asp:Label>
-                        </strong>
-                    </td>
-                    <td class="auto-style9">
-            <asp:TextBox ID="TxtOrderCusNO" runat="server" Height="34px" style="margin-bottom: 0px" Width="270px"></asp:TextBox>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">
-            
-                        <strong>
-            
-            <asp:Label ID="LabelOrderProductNO" runat="server" Text="Order_Product_No" CssClass="auto-style7"></asp:Label>
-                        </strong>
-                    </td>
-                    <td class="auto-style10">
-            <asp:TextBox ID="TxtOrderProductNO" runat="server" Height="34px" style="margin-bottom: 0px" Width="270px"></asp:TextBox>
-                    </td>
-                    <td class="auto-style5"></td>
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-            
-                        &nbsp;</td>
-                    <td class="auto-style9">
-                        </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style1">
-            
-                        &nbsp;</td>
-                    <td class="auto-style9">&nbsp;<strong><asp:Button ID="ButtonOK" runat="server" CssClass="auto-style12" Height="41px" Text="OK" Width="125px" />
-                        </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>
-                        <asp:Button ID="ButtonCancel" runat="server" CssClass="auto-style12" Height="41px" Text="Cancel" Width="125px" />
-                        </strong> </td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
-        </div>
+        <div style="font-weight: 700; text-align: center; height: 69px; background-color: #66CCFF">
+            <br />
+            Order Form</div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">Order_ID:</td>
+                <td>
+                    <asp:TextBox ID="txtOrderID" runat="server" Height="39px" Width="315px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Order_Date:</td>
+                <td>
+                    <asp:TextBox ID="txtOrderDate" runat="server" Height="39px" Width="315px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Order_Type:</td>
+                <td>
+                    <asp:TextBox ID="txtOrderType" runat="server" Height="39px" Width="315px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Order_Cus_No:</td>
+                <td>
+                    <asp:TextBox ID="txtOrderCusNo" runat="server" Height="39px" Width="315px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Order_Product_No:</td>
+                <td>
+                    <asp:TextBox ID="txtOrderProNo" runat="server" Height="39px" Width="315px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td>
+                    <asp:Button ID="ButtonOK" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="OK" Width="122px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="ButtonCancel" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="Cancel" Width="122px" />
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
