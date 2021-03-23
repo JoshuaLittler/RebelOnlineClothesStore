@@ -44,31 +44,92 @@ namespace Clothes_Testing
             }
         }
 
-        public int mOrderID {
+        //private data member for Order
+        private Int32 mOrderID;
+        //public property for Order
+        public Int32 Order_ID {
             get
             {
                 //this line of code sends data out of the property
-                return mOrderID;
+                return Order_ID;
             }
             set
             {
                 //this line of code allows data into the property
-                mOrderID = value;
+                Order_ID = value;
             }
 
                     
         }
-       
 
-        public int CusOrderID { get; internal set; }
-        public int ProductOrderID { get; internal set; }
+        //private data member for Order_Cus_ID
+        private Int32 mOrder_CUS_ID;
+        //public property for Order_Cus_ID
+        public Int32 Order_Cus_ID
+        {
+            get
+            {
+                //this line of code sends data out of the property
+                return Order_Cus_ID;
+            }
+            set
+            {
+                //this line of code allows data into the property
+                Order_Cus_ID = value;
+            }
 
-        internal bool Find(int order_ID)
+        }
+
+        //private data member for Order_Product_ID
+        private Int32 mOrder_Product_ID;
+        //public property for Order_Product_ID
+        public Int32 Order_Product_ID
+        {
+            get
+            {
+                //this line of code sends data out of the property
+                return Order_Product_ID;
+            }
+            set
+            {
+                //this line of code allows data into the property
+                Order_Product_ID = value;
+            }
+
+
+        }
+
+        //private data member for Order_Type
+        private string mOrder_Type;
+        //public property for Order_Type
+        public string Order_Type
+        {
+            get
+            {
+                //this line of code sends data out of the property
+                return Order_Type;
+            }
+            set
+            {
+                //this line of code allows data into the property
+                Order_Type = value;
+            }
+
+
+        }
+
+        public bool Find(int Order_ID)
         {
             //set the private data members to the test data value
-            mOrderID = 21;
-            //always return true 
+            Order_ID = 111;
+            Order_Cus_ID = 1;
+            Order_Type = "Tshirt";
+            Order_Product_ID = 1;
+            Date = Convert.ToDateTime("03/04/2021");
+            Active = true;
+            //always return true
             return true;
         }
+
     }
 }
