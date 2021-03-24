@@ -15,5 +15,32 @@ namespace Clothes_Testing
             Assert.IsNotNull(AProduct);
         }
 
+        [TestMethod]
+        public void StockProductOK()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //create some test data to assign to the product
+            Boolean TestData = true;
+            //assign the data to the product
+            AProduct.Stock = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AProduct.Stock, TestData);
+        }
+
+        [TestMethod]
+        public void ProductNameOK()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //create some test data to assign to the product
+            string TestData = "Nike sweatpants";
+            //assign the data to the product
+            AProduct.Name = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AProduct.Name, TestData);
+        }
+
+
     }
 }

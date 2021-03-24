@@ -2,5 +2,7 @@
 {
     class clsProduct
     {
+        public bool Stock { get; internal set; }
+        public string Name { get; internal set; }
     }
 }
