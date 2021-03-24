@@ -120,9 +120,9 @@ namespace Clothes_Testing
         }
 
         //private data member for HouseNo
-        private Int32 mHouse_No;
+        private string mHouse_No;
         //public property for HouseNo
-        public Int32 House_No
+        public string House_No
         {
             get
             {
@@ -201,15 +201,16 @@ namespace Clothes_Testing
         public bool Find(int Customer_No)
         {
             //set the private data members to the test data value
-            Customer_No = 1;
-            First_Name = "Joshua";
-            Surname = "Littler";
-            Email = "joshlittler10@yahoo.co.uk";
-            House_No = 310;
-            Street = "Hood Lane North";
-            Post_Code = "WA5 1UN";
-            Date_Of_Birth = Convert.ToDateTime("07/05/2000");
-            Active = true;
+            mCustomer_No = 1;
+            mFirst_Name = "Joshua";
+            mSurname = "Littler";
+            mEmail = "joshlittler10@yahoo.co.uk";
+            mHouse_No = "310";
+            mStreet = "Hood Lane North";
+            mTown = "Warrington";
+            mPost_Code = "WA5 1UN";
+            mDate_Of_Birth = Convert.ToDateTime("07/05/2000");
+            mActive = true;
             //always return true
             return true;
         }
