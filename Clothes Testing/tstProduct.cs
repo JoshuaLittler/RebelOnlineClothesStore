@@ -67,6 +67,126 @@ namespace Clothes_Testing
             Assert.AreEqual(AProduct.Price, TestData);
         }
 
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //bollean variable to store the results of the validation
+            Boolean found = false;
+            //create some text data to use with method
+            Int32 ProductID = 24;
+            //invoke the mehtod
+            found = AProduct.Find(ProductID);
+            //test to see if the results is true
+            Assert.IsTrue(found);
 
+        }
+
+        [TestMethod]
+        public void TestProductIDFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductID = 24;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the address no
+            if (AProduct.ProudctID !=24 )
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestPriceFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductID = 24;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the address no
+            if (AProduct.Price != "£49.99")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestNameFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductID = 24;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the address no
+            if (AProduct.Name != "Nike")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestDescriptionFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductID = 24;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the address no
+            if (AProduct.Description != "Medium, Black")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestStockFound()
+        {
+            //create an instance of the class we want to create
+            clsProduct AProduct = new clsProduct();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ProductID = 24;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the address no
+            if (AProduct.Stock != true)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
     }
 }
