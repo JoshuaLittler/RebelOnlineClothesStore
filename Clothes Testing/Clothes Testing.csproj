@@ -49,10 +49,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tstOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClothesClasses\ClothesClasses.csproj">
+      <Project>{7057CB93-6801-4E85-8F20-057AAEC0A8AA}</Project>
+      <Name>ClothesClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
