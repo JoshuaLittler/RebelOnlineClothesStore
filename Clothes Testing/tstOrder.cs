@@ -25,7 +25,7 @@ namespace Clothes_Testing
             //test to see that the two values are the same
             Assert.AreEqual(AnOrder.Order_ID, TestData);
         }
-
+        
         [TestMethod]
         public void DatePropertyOK()
         {
