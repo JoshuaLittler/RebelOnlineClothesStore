@@ -9,9 +9,7 @@
 <body style="height: 253px; width: 531px">
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="ProuductID"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtID" runat="server" style="margin-left: 0px" Width="213px"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="Label2" runat="server" Text="Product Name"></asp:Label>

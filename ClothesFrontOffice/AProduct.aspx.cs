@@ -18,6 +18,10 @@ public partial class AProduct : System.Web.UI.Page
         clsProduct AProduct = new clsProduct();
         //capture the Product Name
         AProduct.Name = txtName.Text;
+        //capture the Product Price
+        AProduct.Price = txtPrice.Text;
+        //capture the product description
+        AProduct.Description = txtDescription.Text;
         //store the product name in the session object
         Session["AProduct"] = AProduct;
         //redirect to the viewer page

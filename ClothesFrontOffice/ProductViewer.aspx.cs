@@ -13,7 +13,11 @@ public partial class ProductViewer : System.Web.UI.Page
         clsProduct AProduct = new clsProduct();
         // get the data from the session object
         AProduct = (clsProduct)Session["AProduct"];
-        //display the Product for this entry
+        //display the Product name for this entry
         Response.Write(AProduct.Name);
+        //display the product price for this entry
+        Response.Write(AProduct.Price);
+        //display the product description for this entry
+        Response.Write(AProduct.Description);
     }
 }
