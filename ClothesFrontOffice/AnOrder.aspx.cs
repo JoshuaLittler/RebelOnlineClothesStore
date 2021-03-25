@@ -12,7 +12,7 @@ public partial class AnOrder : System.Web.UI.Page
     protected void ButtonOK_Click(object sender, EventArgs e)
     {
         //creatr instance new Orderclass
-        clsOrder AnOrder = new clsOrder();
+        clsCustomer AnOrder = new clsCustomer();
 
         //capture the orderType
         AnOrder.Order_Type = txtOrderType.Text;
