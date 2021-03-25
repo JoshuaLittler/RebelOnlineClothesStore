@@ -55,9 +55,9 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>
-                    <asp:Button ID="ButtonOK" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="OK" Width="122px" />
+                    <asp:Button ID="ButtonOK" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="OK" Width="122px" OnClick ="ButtonOK_Click"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="ButtonCancel" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="Cancel" Width="122px" />
+                    <asp:Button ID="ButtonCancel" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="Cancel" Width="122px" OnClick ="ButtonCancel_Click" />
                 </td>
             </tr>
         </table>

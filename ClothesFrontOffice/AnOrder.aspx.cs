@@ -7,7 +7,10 @@ using System.Web.UI.WebControls;
 
 public partial class AnOrder : System.Web.UI.Page
 {
-    
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        
+    }
 
     protected void ButtonOK_Click(object sender, EventArgs e)
     {
@@ -23,4 +26,6 @@ public partial class AnOrder : System.Web.UI.Page
         //redirect to the viewer page
         Response.Redirect("OrderViewer.aspx");
     }
+
+
 }

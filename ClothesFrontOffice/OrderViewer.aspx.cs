@@ -20,6 +20,3 @@ public partial class OrderViewer : System.Web.UI.Page
     }
 }
 
-public class clsOrder
-{
-}

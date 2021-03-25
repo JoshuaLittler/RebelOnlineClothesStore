@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -120,15 +122,34 @@ namespace Clothes_Testing
 
         public bool Find(int Order_ID)
         {
-            //set the private data members to the test data value
-            Order_ID = 111;
-            Order_Cus_ID = 1;
-            Order_Type = "Tshirt";
-            Order_Product_ID = 1;
-            Date = Convert.ToDateTime("03/04/2021");
-            Active = true;
-            //always return true
-            return true;
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+
+            //add the parameter for the address on to search for
+            DB.AddParamater("@Order_ID", Order_ID);
+
+            //execute the store procedur
+            DB.Execute("sproc_tblOrder_FilterByOrder_ID");
+
+            //if one record is found (there should be wither one or Zero!)
+            if (DB.Count == 1)
+            {
+                //set the private data members to the test data value
+                Order_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_ID"]);
+                Order_Cus_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Orer_Cus_ID"]);
+                Order_Type = Convert.ToString(DB.DataTable.Rows[0]["Order_Type"]);
+                Order_Product_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_Product_ID"]);
+                Date = Convert.ToDateTime(DB.DataTable.Rows[0]("13/09/2021");
+                Active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                //always return true
+                return true;
+            }
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
+
         }
 
     }

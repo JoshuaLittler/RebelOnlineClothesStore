@@ -19,7 +19,7 @@ namespace Clothes_Testing
             //create an instance of the class we want to create
             clsOrder AnOrder = new clsOrder();
             //create some test data to assign to the property
-            Int32 TestData = 1;
+            Int32 TestData = 111;
             //assign the data to the property
             AnOrder.Order_ID = TestData;
             //test to see that the two values are the same
@@ -87,7 +87,7 @@ namespace Clothes_Testing
             //boolean variable to store the results of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 Order_ID = 111;
+            Int32 Order_ID = 777;
             //invoke the method
             Found = AnOrder.Find(Order_ID);
             //test to see if the result is true
@@ -104,11 +104,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 Order_ID = 111;
+            Int32 Order_ID = 777;
             //invoke the method
             Found = AnOrder.Find(Order_ID);
             //check the address no
-            if (AnOrder.Order_ID != 111)
+            if (AnOrder.Order_ID != 777)
             {
                 OK = false;
             }
@@ -126,11 +126,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 Order_ID = 111;
+            Int32 Order_ID = 777;
             //invoke the method
             Found = AnOrder.Find(Order_ID);
             //check the property
-            if (AnOrder.Date != Convert.ToDateTime("03/04/2021"))
+            if (AnOrder.Date != Convert.ToDateTime("13/09/2021"))
             {
                 OK = false;
             }
