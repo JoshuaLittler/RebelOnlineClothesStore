@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 
 
+
 namespace Clothes_Testing
 {
     public class clsOrder
@@ -136,10 +137,10 @@ namespace Clothes_Testing
             {
                 //set the private data members to the test data value
                 Order_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_ID"]);
-                Order_Cus_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Orer_Cus_ID"]);
+                Order_Cus_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_Cus_ID"]);
                 Order_Type = Convert.ToString(DB.DataTable.Rows[0]["Order_Type"]);
                 Order_Product_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_Product_ID"]);
-                Date = Convert.ToDateTime(DB.DataTable.Rows[0]("13/09/2021");
+                Date = Convert.ToDateTime(DB.DataTable.Rows[0]("13/09/2021"));
                 Active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 //always return true
                 return true;

@@ -28,4 +28,29 @@ public partial class AnOrder : System.Web.UI.Page
     }
 
 
+
+    protected void ButtonFind_Click(object sender, EventArgs e)
+    {
+        //creat an inatance of the Order class
+        clsOrder AnOrder = new clsOrder();
+        //variable to store the primary key 
+        Int32 Order_ID;
+        //variable to store the results of the find operation
+        Boolean Found = false;
+        //get the primary key entered by the user
+        Order_ID = Convert.ToInt32(txtOrderID.Text);
+        Found = AnOrder.Find(Order_ID);
+
+        //if found
+        if(Found == true)
+        {
+            //display the values of the properties in the form
+            txtOrderCusNo.Text = AnOrder.Order_Cus_No;
+            txtOrderProNo.Text = AnOrder.Order_Product_ID();
+            txtOrderType.Text = AnOrder.Order_Type;
+            txtOrderDate.Text = AnOrder.Order_Date.ToString();
+        }
+    }
+
+
 }
