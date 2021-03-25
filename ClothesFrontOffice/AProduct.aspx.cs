@@ -14,6 +14,13 @@ public partial class AProduct : System.Web.UI.Page
 
     protected void btnOK_Click(object sender, EventArgs e)
     {
-
+        //create a new instance of clsProduct
+        clsProduct AProduct = new clsProduct();
+        //capture the Product Name
+        AProduct.Name = txtName.Text;
+        //store the product name in the session object
+        Session["AProduct"] = AProduct;
+        //redirect to the viewer page
+        Response.Redirect("ProductViewer.aspx");
     }
 }
