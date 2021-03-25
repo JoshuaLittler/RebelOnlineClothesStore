@@ -105,7 +105,7 @@ namespace Clothes_Testing
                 mDescription = Convert.ToString(DB.DataTable.Rows[0]["ProductDescription"]);
                 mStock = Convert.ToBoolean(DB.DataTable.Rows[0]["ProductStock"]);
 
-                
+                //return true
                 return true;
             }
             //if no record was found
