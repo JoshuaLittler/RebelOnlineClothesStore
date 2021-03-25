@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,7 +45,7 @@ namespace Clothes_Testing
             }
         }
 
-        //private data member for Order
+        //private  member for Order
         private Int32 mOrderID;
         //public property for Order
         public Int32 Order_ID {
@@ -153,6 +151,10 @@ namespace Clothes_Testing
 
         }
 
+        public string Valid(string order_Cus_ID, string order_Product_ID, string order_Type, string order_Date)
+        {
+                return "";
+        }
     }
 }
 

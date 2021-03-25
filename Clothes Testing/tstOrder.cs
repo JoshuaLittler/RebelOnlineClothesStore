@@ -1,11 +1,19 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ClothesClasses;
 
 namespace Clothes_Testing
 {
     [TestClass]
     public class tstOrder
     {
+        //good test data
+        //create some test data to pass to the method
+        string Order_Cus_ID = "2";
+        string Order_Product_ID = "1";
+        string Order_Type = "Nike Jacket";
+        string Order_Date = "13/09/20";
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -19,7 +27,7 @@ namespace Clothes_Testing
             //create an instance of the class we want to create
             clsOrder AnOrder = new clsOrder();
             //create some test data to assign to the property
-            Int32 TestData = 111;
+            Int32 TestData = 1;
             //assign the data to the property
             AnOrder.Order_ID = TestData;
             //test to see that the two values are the same
@@ -87,7 +95,7 @@ namespace Clothes_Testing
             //boolean variable to store the results of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 Order_ID = 777;
+            Int32 Order_ID = 111;
             //invoke the method
             Found = AnOrder.Find(Order_ID);
             //test to see if the result is true
@@ -104,11 +112,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 Order_ID = 777;
+            Int32 Order_ID = 111;
             //invoke the method
             Found = AnOrder.Find(Order_ID);
             //check the address no
-            if (AnOrder.Order_ID != 777)
+            if (AnOrder.Order_ID != 111)
             {
                 OK = false;
             }
@@ -126,7 +134,7 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 Order_ID = 777;
+            Int32 Order_ID = 111;
             //invoke the method
             Found = AnOrder.Find(Order_ID);
             //check the property
@@ -170,11 +178,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 Order_Product_ID = 11;
+            Int32 Order_Product_ID = 1;
             //invoke the method
             Found = AnOrder.Find(Order_Product_ID);
             //check the address no
-            if (AnOrder.Order_Product_ID != 11)
+            if (AnOrder.Order_Product_ID != 1)
             {
                 OK = false;
             }
@@ -192,11 +200,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 Order_ID = 21;
+            Int32 Order_ID = 1;
             //invoke the method
             Found = AnOrder.Find(Order_ID);
             //check the property
-            if (AnOrder.Order_Type != "Tshirt")
+            if (AnOrder.Order_Type != "Nike Tshirt")
             {
                 OK = false;
             }
@@ -215,7 +223,7 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 Order_ID = 21;
+            Int32 Order_ID = 1;
             //invoke the method
             Found = AnOrder.Find(Order_ID);
             //check the property
@@ -226,6 +234,20 @@ namespace Clothes_Testing
             //test to see that the result is correct
             Assert.IsTrue(OK);
 
+        }
+
+        [TestMethod]
+        public void ValidMetodOK()
+        {
+            //create an instance of the class we want to create
+            clsOrder AnOrder = new clsOrder();
+            //string variable to store any error message
+            String Error = "";
+            //invoke the method
+            Error = AnOrder.Valid(Order_Cus_ID, Order_Product_ID,Order_Type, Order_Date);
+            //test to see that the results is correct
+            Assert.AreEqual(Error, "");
+            
         }
     }
 }
