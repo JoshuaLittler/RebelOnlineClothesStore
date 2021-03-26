@@ -118,6 +118,8 @@ namespace Clothes_Testing
             }
         }
 
+
+
         internal string Valid(object productID, object name, object price, object description, object stock)
         {
             throw new NotImplementedException();
@@ -127,5 +129,6 @@ namespace Clothes_Testing
         {
             return "";
         }
+
     }
 }
