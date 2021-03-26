@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clothes_Testing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,7 @@ public partial class OrderViewer : System.Web.UI.Page
         AnOrder = (clsOrder)Session["AnOrder"];
 
         //display the order Type 
-        Response.Write(AnOrder.Order_Type);
+        Response.Write(AnOrder.Order_ID);
     }
 }
 

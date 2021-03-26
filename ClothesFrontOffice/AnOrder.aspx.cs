@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clothes_Testing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,7 +19,7 @@ public partial class AnOrder : System.Web.UI.Page
         clsOrder AnOrder = new clsOrder();
 
         //capture the orderType
-        AnOrder.Order_Type = txtOrderType.Text;
+        AnOrder.Order_ID = txtOrderID.Text;
 
         //store the order in the session object
         Session["AnOrder"] = AnOrder;
@@ -39,18 +40,17 @@ public partial class AnOrder : System.Web.UI.Page
         Boolean Found = false;
         //get the primary key entered by the user
         Order_ID = Convert.ToInt32(txtOrderID.Text);
+        //find the record
         Found = AnOrder.Find(Order_ID);
 
         //if found
         if(Found == true)
         {
             //display the values of the properties in the form
-            txtOrderCusNo.Text = AnOrder.Order_Cus_No;
-            txtOrderProNo.Text = AnOrder.Order_Product_ID();
+            txtOrderCusNo.Text = AnOrder.Order_Cus_No.ToString();
+            txtOrderProNo.Text = AnOrder.Order_Product_ID.ToString();
             txtOrderType.Text = AnOrder.Order_Type;
             txtOrderDate.Text = AnOrder.Order_Date.ToString();
         }
     }
-
-
 }

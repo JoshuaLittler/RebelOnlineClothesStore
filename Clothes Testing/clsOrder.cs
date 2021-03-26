@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClothesClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -60,11 +61,11 @@ namespace Clothes_Testing
                 Order_ID = value;
             }
 
-                    
+
         }
 
         //private data member for Order_Cus_ID
-        private Int32 mOrder_CUS_ID;
+        private Int32 mOrder_Cus_ID;
         //public property for Order_Cus_ID
         public Int32 Order_Cus_ID
         {
@@ -121,40 +122,42 @@ namespace Clothes_Testing
 
         public bool Find(int Order_ID)
         {
-            //create an instance of the data connection
+            //creats an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
-
-            //add the parameter for the address on to search for
-            DB.AddParamater("@Order_ID", Order_ID);
-
-            //execute the store procedur
+            //add the parameter for the address no to search for
+            DB.AddParameter("@Order_ID", mOrderID);
+            //exexute the stored procedure
             DB.Execute("sproc_tblOrder_FilterByOrder_ID");
-
-            //if one record is found (there should be wither one or Zero!)
+            //if one record is found 
             if (DB.Count == 1)
             {
-                //set the private data members to the test data value
-                Order_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_ID"]);
-                Order_Cus_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_Cus_ID"]);
-                Order_Type = Convert.ToString(DB.DataTable.Rows[0]["Order_Type"]);
-                Order_Product_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_Product_ID"]);
-                Date = Convert.ToDateTime(DB.DataTable.Rows[0]("13/09/2021"));
-                Active = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
-                //always return true
+                //copy the data from the database to the private data members
+                mOrderID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_ID"]);
+                mOrder_Cus_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_Cus_ID"]);
+                mOrder_Product_ID = Convert.ToInt32(DB.DataTable.Rows[0]["Order_Product_ID"]);
+                mOrder_Type = Convert.ToString(DB.DataTable.Rows[0]["Order_Type"]);
+                mDate = Convert.ToDateTime(DB.DataTable.Rows[0]["Order_Date"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+
+                //return that everything worked OK
                 return true;
             }
+            //if no record was found
             else
             {
                 //return false indicating a problem
                 return false;
             }
-
         }
-
         public string Valid(string order_Cus_ID, string order_Product_ID, string order_Type, string order_Date)
         {
-                return "";
+            return "";
         }
     }
 }
+        
+    
+        
 
+        
+    
