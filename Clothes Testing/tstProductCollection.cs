@@ -24,7 +24,6 @@ namespace Clothes_Testing
             //create an instance of the class we want to create
             clsAddressCollection AllProducts = new clsAddressCollection();
             //create some test data to assign to the property
-            List<ClsAddress>
         }
 }
     }
