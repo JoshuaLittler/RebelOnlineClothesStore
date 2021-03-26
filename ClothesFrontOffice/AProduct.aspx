@@ -56,7 +56,8 @@
 &nbsp;<asp:CheckBox ID="CheckBox1" runat="server" Text="In stock" />
             </p>
         <p>
-            &nbsp;</p>
+            <asp:Label ID="lblError" runat="server" Text="[lblError]"></asp:Label>
+        </p>
         <p>
             &nbsp;</p>
         <p>
