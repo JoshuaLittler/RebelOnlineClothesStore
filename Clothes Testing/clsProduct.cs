@@ -1,9 +1,17 @@
+
 ﻿using ClothesClasses;
 using System;
 
 namespace Clothes_Testing
 {
     public class clsProduct
+
+﻿using System;
+
+namespace Clothes_Testing
+{
+   public class clsProduct
+
     {
         //private data member for the address no property
         private Int32 mProductID;
@@ -36,7 +44,11 @@ namespace Clothes_Testing
             set
             {
                 //set the private data
-                mName = value;
+
+             mName = value;
+
+                mName= value;
+
             }
 
         }
@@ -69,7 +81,11 @@ namespace Clothes_Testing
         }
         public Int32 ProudctID
 
+
         {
+
+        {   
+
             get
             {
                 //this line of code sends data out of the property
@@ -89,6 +105,7 @@ namespace Clothes_Testing
 
         public bool Find(int productID)
         {
+
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the product no to search for
@@ -116,6 +133,7 @@ namespace Clothes_Testing
 
 
             }
+
         }
 
         internal string Valid(object productID, object name, object price, object description, object stock)
