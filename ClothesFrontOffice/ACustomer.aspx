@@ -92,14 +92,18 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style2">
+                    <asp:Label ID="lblError" runat="server"></asp:Label>
+                </td>
                 <td>
-                    <asp:Button ID="ButtonOK" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="OK" Width="122px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="ButtonCancel" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="Cancel" Width="122px" />
+                    <asp:Button ID="btnOK" runat="server" Height="45px" style="font-weight: 700; background-color: #FFFFCC" Text="OK" Width="122px" />
                 </td>
             </tr>
         </table>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

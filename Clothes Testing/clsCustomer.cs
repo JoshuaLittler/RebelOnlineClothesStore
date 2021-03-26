@@ -195,6 +195,117 @@ namespace Clothes_Testing
 
         }
 
+        public string Valid(string FirstName, string Surname, string Email, string HouseNo, string Street, string Town, string PostCode, string DateOfBirth)
+        {
+            //create a string variable to store the error
+            String Error = "";
+            //create a temporary variable to store date values
+            DateTime DateTemp;
+            //if the FirstName is blank
+            if (FirstName.Length == 0)
+            {
+                //record the error
+                Error = Error + "The first name may not be blank : ";
+            }
+            if (FirstName.Length > 50)
+            {
+                //record the error
+                Error = Error + "The first name may more than 50 characters : ";
+            }
+
+            //if the Surname is blank
+            if (Surname.Length == 0)
+            {
+                //record the error
+                Error = Error + "The surname may not be blank : ";
+            }
+            if (Surname.Length > 50)
+            {
+                //record the error
+                Error = Error + "The surname may more than 50 characters : ";
+            }
+
+            //if the Email is blank
+            if (Email.Length == 0)
+            {
+                //record the error
+                Error = Error + "The email may not be blank : ";
+            }
+            if (Email.Length > 50)
+            {
+                //record the error
+                Error = Error + "The email may more than 50 characters : ";
+            }
+
+            //is the post code blank
+            if (PostCode.Length == 0)
+            {
+                //record the error
+                Error = Error + "The post code may not be blank : ";
+            }
+            //if the post code is too long
+            if (PostCode.Length > 9)
+            {
+                //record the error
+                Error = Error + "The post code must be less than 9 characters : ";
+            }
+            //is the street blank
+            if (Street.Length == 0)
+            {
+                //record the error
+                Error = Error + "The street may not be blank : ";
+            }
+            //if the street is too long
+            if (Street.Length > 50)
+            {
+                //record the error
+                Error = Error + "The street must be less than 50 characters : ";
+            }
+            //is the town blank
+            if (Town.Length == 0)
+            {
+                //record the error
+                Error = Error + "The town may not be blank : ";
+            }
+            //if the town is too long
+            if (Town.Length > 50)
+            {
+                //record the error
+                Error = Error + "The town must be less than 50 characters : ";
+            }
+
+            try
+            {
+                //copy the dateOfBirth value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(DateOfBirth);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                //check to see if the date is greater than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+
+            {
+                //record the error
+                Error = Error + "The date can't be in the future";
+            }
+            
+
+            //return any error messages
+            return Error;
+        }
+
+
+
+
+
 
 
 
