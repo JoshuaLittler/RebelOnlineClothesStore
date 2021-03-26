@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ClothesClasses;
 
 namespace ClothesClasses
 {
@@ -178,11 +179,26 @@ namespace ClothesClasses
             {
                 Error = Error + "The Date was not a valid Date";
             }
+
+            //is the street blank
+            if (Order_Type.Length == 0)
+            {
+                //record the error
+                Error = Error + "The order type may not be blank : ";
+            }
+            //if the street is too long
+            if (Order_Type.Length > 50)
+            {
+                //record the error
+                Error = Error + "The order type must be less than 50 characters : ";
+            }
+
             //return any error messages
             return Error;
 
+
         }
 
-       
+
     }
 }

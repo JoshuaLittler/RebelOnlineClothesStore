@@ -100,11 +100,10 @@ namespace Clothes_Testing
             TestItem.Order_Product_ID = 1;
             TestItem.Order_Type = "Nike Tshirt";
             TestItem.Date = DateTime.Now.Date;
-           
-            //assign the data to the property
-            AllOrder.mThisOrder_Type = TestItem;
+            AllOrder.mThisOrder_Type = TestItem;            
             PrimaryKey = AllOrder.Add();
             TestItem.Order_ID = PrimaryKey;
+            AllOrder.mThisOrder_Type.Find(PrimaryKey);
             //test to see that the two values are the same
             Assert.AreEqual(AllOrder.mThisOrder_Type, TestItem);
         }
