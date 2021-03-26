@@ -47,12 +47,45 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+
+
+    <Compile Include="clsProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <Compile Include="tstProduct.cs" />
+
+    <Compile Include="test.cs" />
+
+
+    <Compile Include="clsProduct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tstProduct.cs" />
+
+    <Compile Include="clsCustomer.cs" />
+    <Compile Include="clsOrder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tstCustomer.cs" />
+    <Compile Include="tstOrder.cs" />
+
+
+
+
+    <Compile Include="clsProduct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tstProduct.cs" />
+
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClothesClasses\ClothesClasses.csproj">
+      <Project>{7057CB93-6801-4E85-8F20-057AAEC0A8AA}</Project>
+      <Name>ClothesClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
