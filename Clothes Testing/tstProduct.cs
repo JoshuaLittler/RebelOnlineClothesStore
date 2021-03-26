@@ -82,10 +82,13 @@ namespace Clothes_Testing
             Boolean found = false;
             //create some text data to use with method
 
-            Int32 ProductID = 1;
 
             Int32 ProductID = 1;
 
+            Int32 ProductID = 1;
+
+            Int32 ProductID = 1;
+          
             //invoke the mehtod
             found = AProduct.Find(ProductID);
             //test to see if the results is true
@@ -104,6 +107,7 @@ namespace Clothes_Testing
             Boolean OK = true;
             //create some test data to use with the method
 
+
             Int32 ProductID = 1;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
@@ -114,6 +118,13 @@ namespace Clothes_Testing
             Found = AProduct.Find(ProductID);
             //check the address no
             if (AProduct.ProudctID !=1 )
+
+
+            Int32 ProductID = 1;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the ProductID
+            if (AProduct.ProudctID != 1)
 
             {
                 OK = false;
@@ -132,6 +143,7 @@ namespace Clothes_Testing
             Boolean OK = true;
             //create some test data to use with the method
 
+
             Int32 ProductID = 3;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
@@ -142,6 +154,13 @@ namespace Clothes_Testing
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
             //check the address no
+            if (AProduct.Price != "£40.00")
+
+
+            Int32 ProductID = 3;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the Product
             if (AProduct.Price != "£40.00")
 
             {
@@ -161,6 +180,7 @@ namespace Clothes_Testing
             Boolean OK = true;
             //create some test data to use with the method
 
+
             Int32 ProductID = 1;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
@@ -171,6 +191,13 @@ namespace Clothes_Testing
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
             //check the address no
+            if (AProduct.Name != "Nike shirt")
+
+
+            Int32 ProductID = 1;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the Product  name
             if (AProduct.Name != "Nike shirt")
 
             {
@@ -190,6 +217,7 @@ namespace Clothes_Testing
             Boolean OK = true;
             //create some test data to use with the method
 
+
             Int32 ProductID = 2;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
@@ -200,6 +228,13 @@ namespace Clothes_Testing
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
             //check the address no
+            if (AProduct.Description != "Grey, Medium")
+
+
+            Int32 ProductID = 2;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the Product Description
             if (AProduct.Description != "Grey, Medium")
 
             {
@@ -219,6 +254,7 @@ namespace Clothes_Testing
             Boolean OK = true;
             //create some test data to use with the method
 
+
             Int32 ProductID = 1;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
@@ -228,6 +264,12 @@ namespace Clothes_Testing
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
             //check the address no
+
+
+            Int32 ProductID = 1;
+            //invoke the mehtod
+            Found = AProduct.Find(ProductID);
+            //check the ProductStock
 
             if (AProduct.Stock != true)
             {
