@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Clothes_Testing
 {
+
     
     [TestClass]
     public class tstCustomerCollection
@@ -84,5 +85,38 @@ namespace Clothes_Testing
             //test to see that two values are the same
             Assert.AreEqual(AllCustomers.CustomerList, TestCustomer);
         }
+
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsCustomerCollection AllCustomers = new clsCustomerCollection();
+            //create the item of test data
+            clsCustomer TestItem = new clsCustomer();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.Customer_No = 1;
+            TestItem.First_Name = "Joshua";
+            TestItem.Surname = "Littler";
+            TestItem.Email = "joshlittler10@yahoo.co.uk";
+            TestItem.House_No = "31b";
+            TestItem.Street = "Hood Lane North";
+            TestItem.Town = "Warrington";
+            TestItem.Post_Code = "WA5 1UN";
+            TestItem.Date_Of_Birth = DateTime.Now.Date;
+            //set ThisCustomer to the test data
+            AllCustomers.ThisCustomer = TestItem;
+            //add tyhe record
+            PrimaryKey = AllCustomers.Add();
+            //set the primary key of the test data
+            TestItem.Customer_No = PrimaryKey;
+            //find the record
+            AllCustomers.ThisCustomer.Find(PrimaryKey);
+            //test to see if values are the same
+            Assert.AreEqual(AllCustomers.ThisCustomer, TestItem);
+        }
+
     }
 }
