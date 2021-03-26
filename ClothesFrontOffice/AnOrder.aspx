@@ -75,7 +75,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style3" id="Order_Product_No">&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
                 <td class="auto-style4">
                     <asp:CheckBox ID="CheckBoxActive" runat="server" Text="Active" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
