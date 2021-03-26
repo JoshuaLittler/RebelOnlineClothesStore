@@ -14,4 +14,9 @@ public class clsProduct
     {
         throw new NotImplementedException();
     }
+
+    public string Valid(string name, string price, string description)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -15,21 +15,35 @@ public partial class AProduct : System.Web.UI.Page
     protected void btnOK_Click(object sender, EventArgs e)
     {
         //create a new instance of clsProduct
-        clsProduct AProduct = new clsProduct
+        clsProduct AProduct = new clsProduct();
+        //capture the name
+        string Name = txtName.Text;
+        //capture the price
+        string Price = txtName.Text;
+        //capture the description
+        string Description = txtDescription.Text;
+        //variable to the store any error messages
+        string Error = "";
+        //validate the data
+        Error = AProduct.Valid(Name, Price, Description);
+        if (Error == "")
         {
-            //capture the Product ID
-            ProductID = txtID.Text,
-            //capture the Product Name
-            Name = txtName.Text,
-            //capture the Product Price
-            Price = txtPrice.Text,
-            //capture the product description
-            Description = txtDescription.Text
-        };
-        //store the product name in the session object
-        Session["AProduct"] = AProduct;
-        //redirect to the viewer page
-        Response.Redirect("ProductViewer.aspx");
+            //capture the Name
+            AProduct.Name = Name;
+            //capture the price
+            AProduct.Price = Price;
+            //capture the description
+            AProduct.Description = Description;
+            //store the product name in the session object
+            Session["AProduct"] = AProduct;
+            //redirect to the viewer page
+            Response.Redirect("ProductViewer.aspx");
+        }
+        else
+        {
+            //display the error message
+            lblError.Text = Error;
+        }
     }
 
     protected void btnFind_Click(object sender, EventArgs e)
@@ -53,6 +67,6 @@ public partial class AProduct : System.Web.UI.Page
             txtDescription.Text = AProduct.Description;
 
         }
-        
+
     }
 }
