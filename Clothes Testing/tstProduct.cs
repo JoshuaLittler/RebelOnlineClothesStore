@@ -75,7 +75,7 @@ namespace Clothes_Testing
             //bollean variable to store the results of the validation
             Boolean found = false;
             //create some text data to use with method
-            Int32 ProductID = 24;
+            Int32 ProductID = 1;
             //invoke the mehtod
             found = AProduct.Find(ProductID);
             //test to see if the results is true
@@ -93,11 +93,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductID = 24;
+            Int32 ProductID = 1;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
-            //check the address no
-            if (AProduct.ProudctID !=24 )
+            //check the ProductID
+            if (AProduct.ProudctID != 1)
             {
                 OK = false;
             }
@@ -114,11 +114,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductID = 24;
+            Int32 ProductID = 3;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
-            //check the address no
-            if (AProduct.Price != "£49.99")
+            //check the Product
+            if (AProduct.Price != "£40.00")
             {
                 OK = false;
             }
@@ -135,11 +135,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductID = 24;
+            Int32 ProductID = 1;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
-            //check the address no
-            if (AProduct.Name != "Nike")
+            //check the Product  name
+            if (AProduct.Name != "Nike shirt")
             {
                 OK = false;
             }
@@ -156,11 +156,11 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductID = 24;
+            Int32 ProductID = 2;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
-            //check the address no
-            if (AProduct.Description != "Medium, Black")
+            //check the Product Description
+            if (AProduct.Description != "Grey, Medium")
             {
                 OK = false;
             }
@@ -177,10 +177,10 @@ namespace Clothes_Testing
             //boolean variable to record if data is OK (assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ProductID = 24;
+            Int32 ProductID = 1;
             //invoke the mehtod
             Found = AProduct.Find(ProductID);
-            //check the address no
+            //check the ProductStock
             if (AProduct.Stock != true)
             {
                 OK = false;
